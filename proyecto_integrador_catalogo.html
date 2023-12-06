@@ -588,8 +588,8 @@ scale: 1.03;
  }
  
  .gallery-item {
-  margin-bottom: 50px;
-scale: 0.97;
+  margin-bottom: 0px;
+scale: 0.87;
  }
  #txtmodelos1 {
   translate: 0px 30px;
@@ -597,6 +597,9 @@ scale: 0.97;
  #btn_filtrar {
   scale: 0.8;
  
+ }
+ #btndefault {
+  scale: 0.8;
  }
  #changetxt {
   margin-left: 45px;
@@ -616,7 +619,14 @@ scale: 0.97;
                 width: 100%;
                 margin-bottom: 10px;
             }
-        
+        #item-content {
+          scale: 0.9;
+          translate: 0px -70px;
+        }
+        .modal {
+          scale: 0.8;
+          translate: -630px;
+        }
 }
 
 body{
@@ -684,6 +694,9 @@ background-color: rgb(184, 184, 184);
 #imglogo:hover {
   scale: 1.1;
 }
+#cartModal {
+            overflow: auto;
+        }
       
 .nav-link {
     
@@ -696,6 +709,9 @@ background-color: rgb(184, 184, 184);
 .nav-link:hover {
    width: 100%;
     border-bottom: 1.5px solid rgb(255, 255, 255);
+}
+#modal-filtrar{
+  width: 90%;
 }
 
 </style>
@@ -838,7 +854,7 @@ background-color: rgb(184, 184, 184);
 
     <div class="modal fade" id="filtrosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div id="modal-filtrar" class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Filtros de Productos</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -917,8 +933,9 @@ background-color: rgb(184, 184, 184);
 
     <div class="gallery">
       <div id="itemmargin" style="height: 700px; border-radius: 8px;  overflow: hidden;" class="gallery-item">
-        
+       
         <img id="im" style="opacity: 1;" src="https://images.unsplash.com/photo-1627454820516-dc767bcb4d3e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" alt="Imagen 3">
+        <div id="item-content">
         <div style="font-size: 30px; translate: -180px -695px; color: white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;" class="image-text">CHIRON</div>
         <div style="font-size: 20px; translate: 0px -320px; color: white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="image-text">Lorem ipsum dolor sit amet, consectetur adipisici. </div>
         <div id="changetxt" style="font-size: 20px; translate: 34px -325px; color: white; text-align: left;" class="image-text"> consectetur adipisicing </div>
@@ -936,11 +953,12 @@ background-color: rgb(184, 184, 184);
         <div style="height: 1px; width: 1px;" id="quantityElement">Cantidad: 0</div>
         <div style="height: 1px; width: 1px;" id="txt_total">0</div>
        
-       
+      </div>
       </div>
       
       <div id="itemtranslate" style="height: 700px; border-radius: 8px;  overflow: hidden;" class="gallery-item">
         <img id="im" style="opacity: 1;" src="https://s1.cdn.autoevolution.com/images/news/this-clean-looking-lamborghini-huracan-is-a-hypercar-slayer-206410_1.jpg" alt="Imagen 3">
+        <div id="item-content">
         <div style="font-size: 30px; translate: -155px -695px; color: white; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" class="image-text">HURACAN</div>
         <div style="font-size: 20px; translate: 0px -320px; color: white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="image-text">Lorem ipsum dolor sit amet, consectetur adipisici. </div>
         <div id="changetxt" style="font-size: 20px; translate: 34px -325px; color: white; text-align: left;" class="image-text"> consectetur adipisicing </div>
@@ -948,7 +966,7 @@ background-color: rgb(184, 184, 184);
        
         <div style="font-size: 20px; translate: 0px -320px; color: white;" class="image-text">  <button id="carro2-personalizar" class="btndefault" style="width: 430px;color: rgb(60, 60, 60); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px 0px;">Personalizar vehículo</button> </div>
         <button id="carro2" class="btndefault" style=" color: rgb(255, 255, 255); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px -310px; width: 430px;">Añadir al carrito</button>
-       
+        </div>
       </div>
    
 
@@ -957,6 +975,7 @@ background-color: rgb(184, 184, 184);
     <div class="gallery">
       <div id="itemmargin" style="height: 700px; border-radius: 8px;  overflow: hidden;" class="gallery-item">
         <img id="im" style="opacity: 1;" src="https://i.pinimg.com/1200x/f9/4c/3d/f94c3dd0f6db76057cdea26b96e5dfee.jpg" alt="Imagen 3">
+        <div id="item-content">
         <div style="font-size: 30px; translate: -170px -695px; color: white; font-family:'Times New Roman', Times, serif;" class="image-text">JESKO</div>
         <div style="font-size: 20px; translate: 0px -320px; color: white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="image-text">Lorem ipsum dolor sit amet, consectetur adipisici. </div>
         <div id="changetxt" style="font-size: 20px; translate: 34px -325px; color: white; text-align: left;" class="image-text"> consectetur adipisicing </div>
@@ -964,11 +983,12 @@ background-color: rgb(184, 184, 184);
        
         <div style="font-size: 20px; translate: 0px -320px; color: white;" class="image-text">  <button id="carro3-personalizar" class="btndefault" style="width: 430px; color: rgb(60, 60, 60); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px 0px;">Personalizar vehículo</button> </div>
         <button id="carro3" class="btndefault" style=" color: rgb(255, 255, 255); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px -310px; width: 430px;">Añadir al carrito</button>
-       
+        </div>
       </div>
       
       <div id="itemtranslate" style="height: 700px; border-radius: 8px;  overflow: hidden;" class="gallery-item">
         <img id="im" style="opacity: 1;" src="https://static.displate.com/857x1200/displate/2023-03-28/e3645f200db9375a31a430c7f001b21e_9e9ce30cefc6fb89a8685994eda30dbe.jpg" alt="Imagen 3">
+        <div id="item-content">
         <div style="font-size: 30px; translate: -195px -695px; color: white; font-family: Verdana, Geneva, Tahoma, sans-serif;" class="image-text">F40</div>
         <div style="font-size: 20px; translate: 0px -320px; color: white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="image-text">Lorem ipsum dolor sit amet, consectetur adipisici. </div>
         <div id="changetxt" style="font-size: 20px; translate: 34px -325px; color: white; text-align: left;" class="image-text"> consectetur adipisicing </div>
@@ -976,13 +996,14 @@ background-color: rgb(184, 184, 184);
        
         <div style="font-size: 20px; translate: 0px -320px; color: white;" class="image-text">  <button id="carro4-personalizar" class="btndefault" style="width: 430px; color: rgb(60, 60, 60); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px 0px;">Personalizar vehículo</button> </div>
         <button id="carro4" class="btndefault" style=" color: rgb(255, 255, 255); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px -310px; width: 430px;">Añadir al carrito</button>
-       
+        </div>
       </div>
    
     </div>
     <div class="gallery">
       <div id="itemmargin" style="height: 700px; border-radius: 8px;  overflow: hidden;" class="gallery-item">
         <img id="im" style="opacity: 1;" src="https://images.unsplash.com/photo-1597687210367-a4915552d886?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8fA%3D%3D"  alt="Imagen 1">
+        <div id="item-content">
         <div style="font-size: 30px; translate: -150px -695px; color: white;" class="image-text">F8 TRIBUTO</div>
         <div style="font-size: 20px; translate: 0px -320px; color: white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="image-text">Lorem ipsum dolor sit amet, consectetur adipisici. </div>
         <div id="changetxt" style="font-size: 20px; translate: 34px -325px; color: white; text-align: left;" class="image-text"> consectetur adipisicing </div>
@@ -990,11 +1011,12 @@ background-color: rgb(184, 184, 184);
        
         <div style="font-size: 20px; translate: 0px -320px; color: white;" class="image-text">  <button id="carro5-personalizar" class="btndefault" style="width: 430px; color: rgb(60, 60, 60); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px 0px;">Personalizar vehículo</button> </div>
         <button id="carro5" class="btndefault" style=" color: rgb(255, 255, 255); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px -310px; width: 430px;">Añadir al carrito</button>
-       
+        </div>
       </div>
       
       <div id="itemtranslate" style="height: 700px; border-radius: 8px;  overflow: hidden;" class="gallery-item">
         <img id="im" style="opacity: 1;" src="https://i.pinimg.com/564x/b7/65/f0/b765f00c2f828420ffc66adebca43cd0.jpg" alt="Imagen 3">
+        <div id="item-content">
         <div style="font-size: 32px; translate: -200px -690px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  color: white;" class="image-text">720S</div>
         <div style="font-size: 20px; translate: 0px -320px; color: white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="image-text">Lorem ipsum dolor sit amet, consectetur adipisici. </div>
         <div id="changetxt" style="font-size: 20px; translate: 34px -325px; color: white; text-align: left;" class="image-text"> consectetur adipisicing </div>
@@ -1002,7 +1024,7 @@ background-color: rgb(184, 184, 184);
        
         <div style="font-size: 20px; translate: 0px -320px; color: white;" class="image-text">  <button id="carro6-personalizar" class="btndefault" style="width: 430px; color: rgb(60, 60, 60); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px 0px;">Personalizar vehículo</button> </div>
         <button id="carro6" class="btndefault" style=" color: rgb(255, 255, 255); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px -310px; width: 430px;">Añadir al carrito</button>
-       
+        </div>
       </div>
    
     </div>
@@ -1010,6 +1032,7 @@ background-color: rgb(184, 184, 184);
     <div class="gallery">
       <div id="itemmargin" style="height: 700px; border-radius: 8px;  overflow: hidden;" class="gallery-item">
         <img id="im" style="opacity: 1;" src="https://i.pinimg.com/564x/06/94/ce/0694ce35cc7a3856f6e4f18849e70abe.jpg"  alt="Imagen 1">
+        <div id="item-content">
         <div style="font-size: 30px; translate: -150px -695px; color: white;" class="image-text">R8 ULTIMATE</div>
         <div style="font-size: 20px; translate: 0px -320px; color: white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="image-text">Lorem ipsum dolor sit amet, consectetur adipisici. </div>
         <div id="changetxt" style="font-size: 20px; translate: 34px -325px; color: white; text-align: left;" class="image-text"> consectetur adipisicing </div>
@@ -1017,11 +1040,12 @@ background-color: rgb(184, 184, 184);
        
         <div style="font-size: 20px; translate: 0px -320px; color: white;" class="image-text">  <button id="carro7-personalizar" class="btndefault" style="width: 430px; color: rgb(60, 60, 60); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px 0px;">Personalizar vehículo</button> </div>
         <button id="carro7" class="btndefault" style=" color: rgb(255, 255, 255); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px -310px; width: 430px;">Añadir al carrito</button>
-       
+        </div>
       </div>
       
       <div id="itemtranslate" style="height: 700px; border-radius: 8px;  overflow: hidden;" class="gallery-item">
         <img id="im" style="opacity: 1;" src="https://i.pinimg.com/564x/bc/8b/2f/bc8b2f923c195381668e1b533a4688bb.jpg" alt="Imagen 3">
+        <div id="item-content">
         <div style="font-size: 32px; translate: -190px -690px; font-family:serif;  color: white;" class="image-text">GT2 RS</div>
         <div style="font-size: 20px; translate: 0px -320px; color: white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="image-text">Lorem ipsum dolor sit amet, consectetur adipisici. </div>
         <div id="changetxt" style="font-size: 20px; translate: 34px -325px; color: white; text-align: left;" class="image-text"> consectetur adipisicing </div>
@@ -1029,7 +1053,7 @@ background-color: rgb(184, 184, 184);
        
         <div style="font-size: 20px; translate: 0px -320px; color: white;" class="image-text">  <button id="carro8-personalizar" class="btndefault" style="width: 430px; color: rgb(60, 60, 60); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px 0px;">Personalizar vehículo</button> </div>
         <button id="carro8" class="btndefault" style=" color: rgb(255, 255, 255); border-color: #ffffff; font-weight: 300; margin: 0px; height: 50px; translate: 0px -310px; width: 430px;">Añadir al carrito</button>
-       
+        </div>
       </div>
    
     </div>
